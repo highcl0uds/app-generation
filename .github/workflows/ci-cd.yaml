@@ -1,13 +1,11 @@
-name: Java CI
+name: Java CI/CD with Railway
 
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,8 +24,9 @@ jobs:
       - name: Run tests
         run: mvn test
 
-      - name: Upload JAR as artifact
-        uses: actions/upload-artifact@v3
+      - name: Deploy to Railway
+        uses: railwayapp/railway-action@v2
         with:
-          name: app-generation-jar
-          path: target/*.jar
+          railwayToken: ${{ secrets.RAILWAY_API_TOKEN }}
+          projectId: your_project_id
+          environment: production
