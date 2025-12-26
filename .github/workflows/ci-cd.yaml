@@ -31,4 +31,6 @@ jobs:
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
         run: |
+          echo "Token is set"
+          railway whoami
           railway up --detach
