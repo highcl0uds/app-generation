@@ -8,6 +8,6 @@ public class Main {
         System.out.print("Your year of birth: " + year);
 
         String generation = GenerationCalculation.getGeneration(year);
-        System.out.println("Your generation is: " + generation);
+        System.out.println("Your generation: " + generation);
     }
 }
