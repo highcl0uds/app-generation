@@ -9,6 +9,6 @@ public class Main {
         int year = scanner.nextInt();
 
         String generation = GenerationCalculation.getGeneration(year);
-        System.out.println("Your generation: " + generation);
+        System.out.println("Your generation is: " + generation);
     }
 }
