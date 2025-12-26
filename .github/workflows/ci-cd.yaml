@@ -37,7 +37,7 @@ jobs:
           password: ${{ secrets.GHCR_PAT }}
 
       - name: Build Docker image
-        run: docker build -t ghcr.io/${{ github.repository_owner }}/app-generation:latest .
+        run: docker build -t ghcr.io/${{ github.repository_owner }}/app-generation/app-generation:latest .
 
       - name: Push Docker image
-        run: docker push ghcr.io/${{ github.repository_owner }}/app-generation:latest
+        run: docker push ghcr.io/${{ github.repository_owner }}/app-generation/app-generation:latest
