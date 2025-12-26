@@ -5,9 +5,9 @@ public class Main {
     public static void main(String[] args) {
         int year = 1997;
 
-        System.out.print("Год вашего рождения: " + year);
+        System.out.print("Your year of birth: " + year);
 
         String generation = GenerationCalculation.getGeneration(year);
-        System.out.println("Ваше поколение: " + generation);
+        System.out.println("Your generation: " + generation);
     }
 }
