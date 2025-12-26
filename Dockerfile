@@ -21,7 +21,7 @@ FROM eclipse-temurin:17-jdk-alpine
 WORKDIR /app
 
 # Копируем собранный jar из предыдущего этапа
-COPY --from=build /app/target/generation-app-1.0-SNAPSHOT.jar app.jar
+COPY --from=build /app/target/app-generation-1.0-SNAPSHOT.jar app.jar
 
 # Указываем команду запуска
 ENTRYPOINT ["java", "-jar", "app.jar"]
